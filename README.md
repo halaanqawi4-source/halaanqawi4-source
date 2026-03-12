@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # Hala Anqawi
@@ -24,10 +23,10 @@ Right now I'm working with **Python and C++**, learning **3D modelling in Blende
 
 | # | Project | Tools | What it does |
 |---|---------|-------|--------------|
-| 01 | [Gaza Data Analysis](./Project_1_Data_Visualization/) | Python · pandas · matplotlib · seaborn | Visualizes humanitarian crisis data — casualties, displacement, infrastructure & aid access across 13 months |
-| 02 | [House Price Prediction](./Project_2_ML/) | Python · scikit-learn · Jupyter | End-to-end ML pipeline comparing Linear Regression and Random Forest on a housing dataset — R² of 0.94 |
-| 03 | [Student Management System](./Project_3_CPP/) | C++ | Console-based student database with add, search, edit, delete, and GPA statistics — built with structs, arrays, and functions |
-| 04 | [Virtual Museum Room](./Project_4_Blender/) | Blender · Python (bpy) | Procedurally generated 3D museum scene — room, 5 framed paintings, gallery spotlights, benches, and a 100-frame camera walkthrough |
+| 01 | [Gaza Data Analysis](https://github.com/halaanqawi4-source/halaanqawi4-source/tree/main/Project_1_Data_Visualization) | Python · pandas · matplotlib · seaborn | Visualizes humanitarian crisis data — casualties, displacement, infrastructure & aid access across 13 months |
+| 02 | [House Price Prediction](https://github.com/halaanqawi4-source/halaanqawi4-source/tree/main/Project_2_ML) | Python · scikit-learn · Jupyter | End-to-end ML pipeline comparing Linear Regression and Random Forest on a housing dataset — R² of 0.94 |
+| 03 | [Student Management System](https://github.com/halaanqawi4-source/halaanqawi4-source/tree/main/Project_3_CPP) | C++ | Console-based student database with add, search, edit, delete, and GPA statistics — built with structs, arrays, and functions |
+| 04 | [Virtual Museum Room](https://github.com/halaanqawi4-source/halaanqawi4-source/tree/main/Project_4_Blender) | Blender · Python (bpy) | Procedurally generated 3D museum scene — room, 5 framed paintings, gallery spotlights, benches, and a 100-frame camera walkthrough |
 
 ---
 
