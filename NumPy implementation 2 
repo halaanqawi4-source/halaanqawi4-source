@@ -1,0 +1,148 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNSLeRQIrE9AmrvBQCPbKUi",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/halaanqawi4-source/halaanqawi4-source/blob/main/NumPy%20implementation%202%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "78UOKRTJA_zq",
+        "outputId": "df0a8b35-dd44-4fe7-fec8-7d3ff6b55b0c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Transpose of the matrix:\n",
+            " [[ 1  2  3  4  5  6  7  8]\n",
+            " [ 2  4  6  8 10 12 14 16]\n",
+            " [ 3  6  9 12 15 18 21 24]\n",
+            " [ 4  8 12 16 20 24 28 32]\n",
+            " [ 5 10 15 20 25 30 35 40]\n",
+            " [ 6 12 18 24 30 36 42 48]\n",
+            " [ 7 14 21 28 35 42 49 56]\n",
+            " [ 8 16 24 32 40 49 56 64]]\n",
+            "\n",
+            "Determinant of the matrix: 0.0\n",
+            "The matrix is singular, it does not have an inverse\n",
+            "\n",
+            "Cofactor matrix:\n",
+            " [[ 0. -0.  0. -0.  0. -0.  0. -0.]\n",
+            " [-0.  0. -0.  0. -0.  0. -0.  0.]\n",
+            " [ 0. -0.  0. -0.  0. -0.  0. -0.]\n",
+            " [-0.  0. -0.  0. -0.  0. -0.  0.]\n",
+            " [ 0. -0.  0. -0.  0. -0.  0. -0.]\n",
+            " [-0.  0. -0.  0. -0.  0. -0.  0.]\n",
+            " [ 0. -0.  0. -0.  0. -0.  0. -0.]\n",
+            " [-0.  0. -0.  0. -0.  0. -0.  0.]]\n",
+            "\n",
+            "Minors matrix:\n",
+            " [[0. 0. 0. 0. 0. 0. 0. 0.]\n",
+            " [0. 0. 0. 0. 0. 0. 0. 0.]\n",
+            " [0. 0. 0. 0. 0. 0. 0. 0.]\n",
+            " [0. 0. 0. 0. 0. 0. 0. 0.]\n",
+            " [0. 0. 0. 0. 0. 0. 0. 0.]\n",
+            " [0. 0. 0. 0. 0. 0. 0. 0.]\n",
+            " [0. 0. 0. 0. 0. 0. 0. 0.]\n",
+            " [0. 0. 0. 0. 0. 0. 0. 0.]]\n",
+            "\n",
+            "Adjoint of the matrix:\n",
+            " [[ 0. -0.  0. -0.  0. -0.  0. -0.]\n",
+            " [-0.  0. -0.  0. -0.  0. -0.  0.]\n",
+            " [ 0. -0.  0. -0.  0. -0.  0. -0.]\n",
+            " [-0.  0. -0.  0. -0.  0. -0.  0.]\n",
+            " [ 0. -0.  0. -0.  0. -0.  0. -0.]\n",
+            " [-0.  0. -0.  0. -0.  0. -0.  0.]\n",
+            " [ 0. -0.  0. -0.  0. -0.  0. -0.]\n",
+            " [-0.  0. -0.  0. -0.  0. -0.  0.]]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "matrix = np.array([\n",
+        "    [1, 2, 3, 4, 5, 6, 7, 8],\n",
+        "    [2, 4, 6, 8, 10, 12, 14, 16],\n",
+        "    [3, 6, 9, 12, 15, 18, 21, 24],\n",
+        "    [4, 8, 12, 16, 20, 24, 28, 32],\n",
+        "    [5, 10, 15, 20, 25, 30, 35, 40],\n",
+        "    [6, 12, 18, 24, 30, 36, 42, 49],\n",
+        "    [7, 14, 21, 28, 35, 42, 49, 56],\n",
+        "    [8, 16, 24, 32, 40, 48, 56, 64]\n",
+        "])\n",
+        "\n",
+        "transpose = matrix.T\n",
+        "print(\"Transpose of the matrix:\\n\", transpose)\n",
+        "\n",
+        "det = np.linalg.det(matrix)\n",
+        "print(\"\\nDeterminant of the matrix:\", det)\n",
+        "\n",
+        "if np.isclose(det, 0):\n",
+        "    print(\"The matrix is singular, it does not have an inverse\")\n",
+        "else:\n",
+        "    inverse = np.linalg.inv(matrix)\n",
+        "    print(\"\\nInverse of the matrix:\\n\", inverse)\n",
+        "\n",
+        "def cofactor_matrix(mat):\n",
+        "    n = mat.shape[0]\n",
+        "    cof_mat = np.zeros((n, n))\n",
+        "\n",
+        "    for i in range(n):\n",
+        "        for j in range(n):\n",
+        "            minor = np.delete(np.delete(mat, i, axis=0), j, axis=1)\n",
+        "            cof_mat[i, j] = ((-1) ** (i + j)) * np.linalg.det(minor)\n",
+        "\n",
+        "    return cof_mat\n",
+        "\n",
+        "cofactors = cofactor_matrix(matrix)\n",
+        "print(\"\\nCofactor matrix:\\n\", cofactors)\n",
+        "\n",
+        "def minors_matrix(mat):\n",
+        "    n = mat.shape[0]\n",
+        "    minors = np.zeros((n, n))\n",
+        "\n",
+        "    for i in range(n):\n",
+        "        for j in range(n):\n",
+        "            minor = np.delete(np.delete(mat, i, axis=0), j, axis=1)\n",
+        "            minors[i, j] = np.linalg.det(minor)\n",
+        "\n",
+        "    return minors\n",
+        "\n",
+        "minors = minors_matrix(matrix)\n",
+        "print(\"\\nMinors matrix:\\n\", minors)\n",
+        "\n",
+        "adjoint = cofactors.T\n",
+        "print(\"\\nAdjoint of the matrix:\\n\", adjoint)\n"
+      ]
+    }
+  ]
+}
